@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: mason-org/actions/package-lint@testing
+        with:
+          fetch-depth: 1
+      - uses: mason-org/actions/registry-lint@testing
 
   test:
     needs: lint
