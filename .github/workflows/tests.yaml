@@ -3,6 +3,12 @@ name: Package tests
 
 on:
   pull_request:
+  workflow_dispatch:
+    inputs:
+      packages:
+        type: string
+        description: Space-separated list of package definitions to test.
+        required: true
 
 jobs:
   lint:
@@ -11,8 +17,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - uses: mason-org/actions/registry-lint@testing
+      - uses: mason-org/actions/registry-lint@v1
+        with:
+          packages: ${{ github.event.inputs.packages }}
 
   test:
     needs: lint
-    uses: mason-org/actions/.github/workflows/package-tests.yaml@testing
+    uses: mason-org/actions/.github/workflows/package-tests.yaml@v1
+    with:
+      packages: ${{ github.event.inputs.packages }}
