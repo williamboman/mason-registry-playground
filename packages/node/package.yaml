@@ -1,0 +1,112 @@
+---
+name: node
+# description: It's Node!
+homepage: https://nodejs.org
+licenses:
+  - MIT
+languages:
+  - JavaScript
+categories:
+  - Runtime
+
+source:
+  id: pkg:generic/node@v18.16.0
+  download:
+    - target: darwin_arm64
+      files:
+        node.tar.gz: https://nodejs.org/dist/{{version}}/node-{{version}}-darwin-arm64.tar.gz
+      share:
+        doc: node-{{version}}-darwin-arm64/share/doc/
+        man: node-{{version}}-darwin-arm64/share/man/
+        systemtap: node-{{version}}-darwin-arm64/share/systemtap/
+      bin:
+        node: node-{{version}}-darwin-arm64/bin/node
+        npm: node-{{version}}-darwin-arm64/bin/npm
+        npx: node-{{version}}-darwin-arm64/bin/npx
+        corepack: node-{{version}}-darwin-arm64/bin/corepack
+    - target: darwin_x64
+      files:
+        node.tar.gz: https://nodejs.org/dist/{{version}}/node-{{version}}-darwin-x64.tar.gz
+      share:
+        doc: node-{{version}}-darwin-x64/share/doc/
+        man: node-{{version}}-darwin-x64/share/man/
+        systemtap: node-{{version}}-darwin-x64/share/systemtap/
+      bin:
+        node: node-{{version}}-darwin-x64/bin/node
+        npm: node-{{version}}-darwin-x64/bin/npm
+        npx: node-{{version}}-darwin-x64/bin/npx
+        corepack: node-{{version}}-darwin-x64/bin/corepack
+    - target: linux_arm64
+      files:
+        node.tar.gz: https://nodejs.org/dist/{{version}}/node-{{version}}-linux-arm64.tar.gz
+      share:
+        doc: node-{{version}}-linux-arm64/share/doc/
+        man: node-{{version}}-linux-arm64/share/man/
+        systemtap: node-{{version}}-linux-arm64/share/systemtap/
+      bin:
+        node: node-{{version}}-linux-arm64/bin/node
+        npm: node-{{version}}-linux-arm64/bin/npm
+        npx: node-{{version}}-linux-arm64/bin/npx
+        corepack: node-{{version}}-linux-arm64/bin/corepack
+    - target: linux_x64
+      files:
+        node.tar.gz: https://nodejs.org/dist/{{version}}/node-{{version}}-linux-x64.tar.gz
+      share:
+        doc: node-{{version}}-linux-x64/share/doc/
+        man: node-{{version}}-linux-x64/share/man/
+        systemtap: node-{{version}}-linux-x64/share/systemtap/
+      bin:
+        node: node-{{version}}-linux-x64/bin/node
+        npm: node-{{version}}-linux-x64/bin/npm
+        npx: node-{{version}}-linux-x64/bin/npx
+        corepack: node-{{version}}-linux-x64/bin/corepack
+    - target: linux_armv7l
+      files:
+        node.tar.gz: https://nodejs.org/dist/{{version}}/node-{{version}}-linux-armv7l.tar.gz
+      share:
+        doc: node-{{version}}-linux-armv7l/share/doc/
+        man: node-{{version}}-linux-armv7l/share/man/
+        systemtap: node-{{version}}-linux-armv7l/share/systemtap/
+      bin:
+        node: node-{{version}}-linux-armv7l/bin/node
+        npm: node-{{version}}-linux-armv7l/bin/npm
+        npx: node-{{version}}-linux-armv7l/bin/npx
+        corepack: node-{{version}}-linux-armv7l/bin/corepack
+    - target: win_arm64
+      files:
+        node.zip: https://nodejs.org/dist/{{version}}/node-{{version}}-win-arm64.zip
+      share: {}
+      bin:
+        node: node-{{version}}-win-arm64/node.exe
+        npm: node-{{version}}-win-arm64/npm.cmd
+        npx: node-{{version}}-win-arm64/npx.cmd
+        corepack: node-{{version}}-win-arm64/corepack.cmd
+    - target: win_x64
+      files:
+        node.zip: https://nodejs.org/dist/{{version}}/node-{{version}}-win-x64.zip
+      share: {}
+      bin:
+        node: node-{{version}}-win-x64/node.exe
+        npm: node-{{version}}-win-x64/npm.cmd
+        npx: node-{{version}}-win-x64/npx.cmd
+        corepack: node-{{version}}-win-x64/corepack.cmd
+    - target: win_x86
+      files:
+        node.zip: https://nodejs.org/dist/{{version}}/node-{{version}}-win-x86.zip
+      share: {}
+      bin:
+        node: node-{{version}}-win-x86/node.exe
+        npm: node-{{version}}-win-x86/npm.cmd
+        npx: node-{{version}}-win-x86/npx.cmd
+        corepack: node-{{version}}-win-x86/corepack.cmd
+
+bin:
+  node: "{{source.download.bin.node}}"
+  npm: "{{source.download.bin.npm}}"
+  npx: "{{source.download.bin.npx}}"
+  corepack: "{{source.download.bin.corepack}}"
+
+share:
+  doc/: "{{source.download.share.doc}}"
+  man/: "{{source.download.share.man}}"
+  systemtap/: "{{source.download.share.systemtap}}"
