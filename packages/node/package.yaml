@@ -72,15 +72,6 @@ source:
         npm: node-{{version}}-linux-armv7l/bin/npm
         npx: node-{{version}}-linux-armv7l/bin/npx
         corepack: node-{{version}}-linux-armv7l/bin/corepack
-    - target: win_arm64
-      files:
-        node.zip: https://nodejs.org/dist/{{version}}/node-{{version}}-win-arm64.zip
-      share: {}
-      bin:
-        node: node-{{version}}-win-arm64/node.exe
-        npm: node-{{version}}-win-arm64/npm.cmd
-        npx: node-{{version}}-win-arm64/npx.cmd
-        corepack: node-{{version}}-win-arm64/corepack.cmd
     - target: win_x64
       files:
         node.zip: https://nodejs.org/dist/{{version}}/node-{{version}}-win-x64.zip
