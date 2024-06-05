@@ -10,7 +10,7 @@ categories:
   - Runtime
 
 source:
-  id: pkg:generic/node@v18.16.0
+  id: pkg:generic/node@v18.20.3
   download:
     - target: darwin_arm64
       files:
