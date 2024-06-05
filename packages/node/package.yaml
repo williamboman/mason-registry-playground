@@ -1,6 +1,6 @@
 ---
 name: node
-# description: It's Node!
+description: It's Node!
 homepage: https://nodejs.org
 licenses:
   - MIT
