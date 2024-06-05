@@ -1,0 +1,16 @@
+---
+name: Package tests
+
+on:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mason-org/actions/package-lint@testing
+
+  test:
+    needs: lint
+    uses: mason-org/actions/.github/workflows/package-tests.yaml@testing
