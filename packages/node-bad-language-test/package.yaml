@@ -1,6 +1,6 @@
 ---
 name: node-bad-language-test
-description: It's Node!
+description: It's Node! test
 homepage: https://nodejs.org
 licenses:
   - MIT
