@@ -6,7 +6,7 @@ description: |
   definition for many code editors, including VS Code, Emacs and Vim.
 homepage: https://github.com/rust-lang/rust-analyzer
 licenses:
-  - Apache-2.0
+  - Apache 2
   - MIT
 languages:
   - Rust
