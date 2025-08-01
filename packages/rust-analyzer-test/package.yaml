@@ -44,3 +44,5 @@ schemas:
 
 bin:
   rust-analyzer: "{{source.asset.bin}}"
+
+
