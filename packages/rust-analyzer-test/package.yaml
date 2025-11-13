@@ -1,7 +1,7 @@
 ---
 name: rust-analyzer-test
 description: |
-  russt-analyzer is an implementation of the Language Server Protocol for the
+  russt-analyzers is an implementation of the Language Server Protocol for the
   Rust programming language. It provides features like completion and goto
   definition for many code editors, including VS Code, Emacs and Vim.
 homepage: https://github.com/rust-lang/rust-analyzer
