@@ -1,5 +1,5 @@
 ---
-name: rust-analyzer-test
+name: rust-analyzer-v2
 description: |
   russt-analyzers is an implementation of the Language Server Protocol for the
   Rust programming language. It provides features like completion and goto
